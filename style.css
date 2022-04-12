@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+/* ### Primary
+
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%) */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1{
+    font-size: 25px;
+    color:  hsl(234, 12%, 34%);
+    margin-bottom: 1rem;
+}
+span{
+    font-weight: 200;
+}
+
+
+h2{
+    color:  hsl(234, 12%, 34%);
+    margin-bottom: .5rem;
+    font-size: 20px;
+}
+
+
+p{
+    font-weight: 300;
+    color: hsl(229, 6%, 66%) ;
+}
+
+
+
+
+body{
+    font-size: 15px;
+    font-family: poppins;
+    width: 100%;
+    background-color:  hsl(0, 0%, 98%);
+}
+
+.container{
+    width: 100%;
+    padding: 4rem 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+
+.container .top-section{
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 500px;
+}
+
+
+.cards{
+    display: grid;
+}
+
+
+
+
+.card{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.197);
+    margin-bottom: 1.5rem;
+    padding: 2rem ;
+    border-radius: .3rem;
+    max-width: 400px;
+}
+
+.card p{
+    margin-bottom: 2rem;
+}
+
+.card .img{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+
+
+
+
+
+.card1{
+    border-top: .3rem solid hsl(180, 62%, 55%);
+}
+.card2{
+    border-top: .3rem solid  hsl(0, 78%, 62%);
+}
+.card3{
+    border-top: .3rem solid hsl(34, 97%, 64%);
+}
+.card4{
+    border-top: .3rem solid  hsl(212, 86%, 64%);
+}
+
+
+@media screen and (min-width:750px){
+
+
+    .cards{
+        grid-template-columns: auto auto;
+        gap: 1.5rem;
+    }
+
+
+}
+
+
+@media screen and (min-width:1200px) {
+
+
+
+
+    h1{
+        font-size: 35px;
+    }    
+    
+    
+    
+    h2{
+      
+        font-size: 25px;
+    }
+    
+    
+ 
+
+    .cards{
+        grid-template-areas: "grid1 grid2 grid4"
+        "grid1 grid3 grid4";
+        gap: 1.5rem;
+    }
+
+    .card1{
+       grid-area: grid1;
+       height:max-content;
+       transform: translateY(50%);
+    }
+    .card2{
+        grid-area: grid2;
+    }
+    .card3{
+        grid-area: grid3;
+    }
+    .card4{
+       grid-area: grid4;
+       height: max-content;
+       transform: translateY(50%);
+    }
+    
+}
